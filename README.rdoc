@@ -1,8 +1,6 @@
 == README
 
-πππππππππππππππππππππππππππππππ
-ππππππππ EVENT πππ PLANNER πππππππ
-πππππππππππππππππππππππππππππππ
+πππππππππ EVENT πππ PLANNER πππππππππ
 
 Event planner is a place to organize free events happening in San Francisco. Users can place pins on the map and then then text a twilio phone number to find out how close they are to the events.Right now, the location data is centered above my house but will implement soon peronalized location data for users.
 
