@@ -1,0 +1,16 @@
+ h1 {
+  color: blue;
+ }
+
+#map-canvas {
+  height: 85%;
+  width: 70%;
+  margin: auto;
+  position: relative;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.container{
+  height: 100vh;
+}
