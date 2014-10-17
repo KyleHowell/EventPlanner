@@ -1,4 +1,17 @@
+<%= form_for @event do |f| %>
+  Title: <%= f.text_field :title %>
+  Description: <%= f.text_area :description, size: "60x12" %>
+  Address: <%= f.text_field :address %>
+  Latitude: <%= f.text_field :latitude %>
+  Longitude: <%= f.text_field :longitude %>
+  <%= f.submit "Submit Event" %>
+<% end %>
+
 <div class="container">
   <h1> Event Planner </h1>
   <div id="map-canvas"></div>
+</div>
+
+<div class="sidebar">
+
 </div>

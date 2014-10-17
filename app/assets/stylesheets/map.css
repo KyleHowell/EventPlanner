@@ -14,3 +14,13 @@
 .container{
   height: 100vh;
 }
+
+.sidebar{
+  background-color: #106767;
+  float: right;
+  width: 20%;
+  height: 80%;
+  opacity: 0.8;
+  border-radius: 10px;
+  margin-right: 50px;
+}
