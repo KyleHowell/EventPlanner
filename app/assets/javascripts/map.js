@@ -1,4 +1,12 @@
 function initialize() {
+  $.ajax({
+    datatype: "json",
+    url: "/events",
+    type: "GET",
+    success: function(data) {
+      console.log(data)
+    }
+});
 
   var mapOptions = {
     center: new google.maps.LatLng(37.785564, -122.396935),

@@ -1,9 +1,9 @@
 <%= form_for @event do |f| %>
-  Title: <%= f.text_field :title %>
-  Description: <%= f.text_area :description, size: "60x12" %>
-  Address: <%= f.text_field :address %>
-  Latitude: <%= f.text_field :latitude %>
-  Longitude: <%= f.text_field :longitude %>
+  Title: <%= f.text_field :title %><br />
+  Description: <%= f.text_area :description, size: "60x12" %><br />
+  Address: <%= f.text_field :address %><br />
+  Latitude: <%= f.text_field :latitude %><br />
+  Longitude: <%= f.text_field :longitude %><br />
   <%= f.submit "Submit Event" %>
 <% end %>
 
