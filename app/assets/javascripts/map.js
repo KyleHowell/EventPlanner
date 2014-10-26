@@ -1,13 +1,4 @@
 function initialize() {
-  $.ajax({
-    datatype: "json",
-    url: "/events",
-    type: "GET",
-    success: function(data) {
-      console.log(data)
-    }
-});
-
   var mapOptions = {
     center: new google.maps.LatLng(37.785564, -122.396935),
     zoom: 14,
@@ -35,8 +26,21 @@ function initialize() {
   {"featureType": "administrative","elementType": "geometry.fill","stylers": [{"color": "#000000"}]},
   {"featureType": "administrative","elementType": "geometry.stroke","stylers": [{"color": "#144b53"},{"lightness": 14},{"weight": 1.4}]}];
   map.setOptions({styles: styles});
+
+  //POPULATE MARKERS
+  $.get('/events').success(function(events) {
+    console.log(events);
+    for (var i = 0; i < events.length; i++) {
+      var location = new google.maps.LatLng(parseFloat(events[i].latitude), parseFloat(events[i].longitude))
+      var marker = new google.maps.Marker({
+        position: location,
+        title: events[i].title,
+        map: map,
+      });
+    }
+  });
 }
 
 $(document).ready(function() {
-  google.maps.event.addDomListener(window, 'load', initialize);
+  google.maps.event.addDomListener(window, 'load', initialize());
 });
