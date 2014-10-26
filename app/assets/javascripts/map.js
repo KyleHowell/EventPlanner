@@ -39,6 +39,24 @@ function initialize() {
       });
     }
   });
+
+  //ADD NEW MARKER ON CLICK, UPDATE COORDINATES
+  google.maps.event.addListener(map, 'click', function(event) {
+    placeMarker(event.latLng);
+    document.getElementById("event_latitude").value = event.latLng.lng();
+    document.getElementById("event_longitude").value = event.latLng.lng();
+  });
+  function placeMarker(location) {
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map,
+      draggable: true
+    });
+    google.maps.event.addListener(marker, 'dragend', function (event) {
+      document.getElementById("event_latitude").value = this.getPosition().lat();
+      document.getElementById("event_longitude").value = this.getPosition().lng();
+    });
+  }
 }
 
 $(document).ready(function() {
