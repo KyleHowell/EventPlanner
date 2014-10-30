@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  color: white;
+  background-image: url("http://i58.tinypic.com/30kf7kg.jpg");
+}
