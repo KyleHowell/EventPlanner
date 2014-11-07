@@ -1,14 +1,16 @@
-<%= form_for @event do |f| %>
+<h1> Event Planner </h1>
+
+<%= form_for @event, :html => {:id => "input"} do |f| %>
   Title: <%= f.text_field :title %><br />
   Description: <%= f.text_area :description, size: "60x12" %><br />
   Address: <%= f.text_field :address %><br />
   Latitude: <%= f.text_field :latitude %><br />
   Longitude: <%= f.text_field :longitude %><br />
-  <%= f.submit "Submit Event" %>
+  </div>
+  <%= f.submit "Submit Event", :id => 'submit_event' %>
 <% end %>
 
 <div class="container">
-  <h1> Event Planner </h1>
   <div id="map-canvas"></div>
 </div>
 
