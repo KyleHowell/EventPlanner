@@ -3,16 +3,32 @@ h1{
   text-align: center;
 }
 
-#input{
+body{
+  /*font-family: 'Titillium Web', sans-serif;*/
+  font-family: 'Montserrat', sans-serif;
+}
+
+#center{
   text-align: center;
 }
 
 #submit_event{
-  color: orange;
-  font-size: 3000px;
-  width: 300px;
-  height: 2000px;
+  font-size: 3em;
+  width: 30%;
+  height: 10%;
   margin-bottom: 20px;
+}
+
+.description{
+  font-size: 2em;
+  color: purple;
+  background-color: rgba(0,0,0,0);
+}
+
+.input{
+  color: purple;
+  background-color: rgba(0,0,0,0);
+  font-size: 2em;
 }
 
 

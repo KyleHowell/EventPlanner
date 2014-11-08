@@ -1,13 +1,13 @@
 <h1> Event Planner </h1>
 
-<%= form_for @event, :html => {:id => "input"} do |f| %>
-  Title: <%= f.text_field :title %><br />
-  Description: <%= f.text_area :description, size: "60x12" %><br />
-  Address: <%= f.text_field :address %><br />
-  Latitude: <%= f.text_field :latitude %><br />
-  Longitude: <%= f.text_field :longitude %><br />
+<%= form_for @event, :html => {:id => "center"} do |f| %>
+  Title: <%= f.text_field :title, class: "input" %><br />
+  Description: <%= f.text_area :description, size: "40x10", class: "description" %><br />
+  Address: <%= f.text_field :address, class: "input" %><br />
+  Latitude: <%= f.text_field :latitude, class: "input" %><br />
+  Longitude: <%= f.text_field :longitude, class: "input" %><br />
   </div>
-  <%= f.submit "Submit Event", :id => 'submit_event' %>
+  <%= f.submit "Save Event", :id => 'submit_event' %>
 <% end %>
 
 <div class="container">
